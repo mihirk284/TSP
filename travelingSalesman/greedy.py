@@ -43,5 +43,8 @@ def get_closest(city, cities, visited):
 def dist_squared(c1, c2):
 	t1 = c2[0] - c1[0]
 	t2 = c2[1] - c1[1]
+	t3 = 0
+	if (len(c1) == 3) and (len(c2) == 3):
+		t3 = c2[2] - c1[2]
 
-	return t1**2 + t2**2
+	return t1**2 + t2**2 + t3**2
